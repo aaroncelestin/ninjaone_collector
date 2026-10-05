@@ -88,15 +88,6 @@ ls -l .env     # should show -rw-------
 
 The collector logs a warning if other users can read the file.
 
-### 4. Keep it out of git
-
-`.env` and `.auth.env` are already listed in `.gitignore`. If one was committed before the ignore rule existed, stop tracking it, then **rotate the secret in NinjaOne**:
-
-```bash
-git rm --cached .env
-git commit -m "Stop tracking .env"
-```
-
 ---
 
 ## Quick start
